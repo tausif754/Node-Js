@@ -3,6 +3,9 @@ const fs = require("fs");
 const http = require("http");
 const path = require("path");
 
+const os = require("os");
+const { log } = require("console");
+
 // fs.readFile("data.txt", "utf8", (err, data) => {
 //   if (err) {
 //     console.log(err);
@@ -33,8 +36,14 @@ const path = require("path");
 // });
 
 // Example of path module
-const directory = "/user/local";
-const fileName = "example.txt";
+// const directory = "/user/local";
+// const fileName = "example.txt";
 
-const fullPath = path.join(directory, fileName);
-console.log(fullPath);
+// const fullPath = path.join(directory, fileName);
+// console.log(fullPath);
+
+console.log("Platfrom: ", os.platform());
+console.log("CPU Architecture: ", os.arch());
+// console.log("CPU Core Info: ", os.cpus());
+// log("Free Memory: ", os.freemem());
+// log("Total Memory: ", os.totalmem());

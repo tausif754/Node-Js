@@ -4,6 +4,8 @@ const http = require("http");
 const path = require("path");
 
 const os = require("os");
+const url = require("url");
+
 const { log } = require("console");
 
 // fs.readFile("data.txt", "utf8", (err, data) => {
@@ -42,8 +44,17 @@ const { log } = require("console");
 // const fullPath = path.join(directory, fileName);
 // console.log(fullPath);
 
-console.log("Platfrom: ", os.platform());
-console.log("CPU Architecture: ", os.arch());
+// console.log("Platfrom: ", os.platform());
+// console.log("CPU Architecture: ", os.arch());
 // console.log("CPU Core Info: ", os.cpus());
 // log("Free Memory: ", os.freemem());
 // log("Total Memory: ", os.totalmem());
+
+const myurl = new URL("http://mywebsite.com/hello.html?id=100&status=active");
+// console.log(myurl.href);
+// console.log(myurl.toString());
+// console.log(myurl.host);
+// console.log(myurl.hostname);
+// console.log("Pathname: ", myurl.pathname);
+
+console.log("Search Params: ", myurl.searchParams);

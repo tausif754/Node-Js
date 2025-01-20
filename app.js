@@ -6,7 +6,9 @@ const path = require("path");
 const os = require("os");
 const url = require("url");
 const crypto = require("crypto");
+const sayHello = require("./greetings");
 
+const math = require("./math");
 const { log } = require("console");
 
 // fs.readFile("data.txt", "utf8", (err, data) => {
@@ -60,6 +62,14 @@ const { log } = require("console");
 
 // console.log("Search Params: ", myurl.searchParams);
 
-const hash = crypto.createHash("sha256");
-hash.update("Hello World");
-console.log(hash.digest("hex"));
+// const hash = crypto.createHash("sha256");
+// hash.update("Hello World");
+// console.log(hash.digest("hex"));
+
+// how to create custom core module
+
+const message = sayHello("Developer");
+console.log(message);
+
+log(math.add(2, 3));
+log(math.subtract(5, 2));

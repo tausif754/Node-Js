@@ -5,6 +5,7 @@ const path = require("path");
 
 const os = require("os");
 const url = require("url");
+const crypto = require("crypto");
 
 const { log } = require("console");
 
@@ -50,11 +51,15 @@ const { log } = require("console");
 // log("Free Memory: ", os.freemem());
 // log("Total Memory: ", os.totalmem());
 
-const myurl = new URL("http://mywebsite.com/hello.html?id=100&status=active");
+// const myurl = new URL("http://mywebsite.com/hello.html?id=100&status=active");
 // console.log(myurl.href);
 // console.log(myurl.toString());
 // console.log(myurl.host);
 // console.log(myurl.hostname);
 // console.log("Pathname: ", myurl.pathname);
 
-console.log("Search Params: ", myurl.searchParams);
+// console.log("Search Params: ", myurl.searchParams);
+
+const hash = crypto.createHash("sha256");
+hash.update("Hello World");
+console.log(hash.digest("hex"));

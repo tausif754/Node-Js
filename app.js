@@ -9,7 +9,9 @@ const crypto = require("crypto");
 const sayHello = require("./greetings");
 
 const math = require("./math");
-const { log } = require("console");
+const lodash = require("lodash");
+
+// const { log } = require("console");
 
 // fs.readFile("data.txt", "utf8", (err, data) => {
 //   if (err) {
@@ -68,8 +70,13 @@ const { log } = require("console");
 
 // how to create custom core module
 
-const message = sayHello("Developer");
-console.log(message);
+// const message = sayHello("Developer");
+// console.log(message);
 
-log(math.add(2, 3));
-log(math.subtract(5, 2));
+// log(math.add(2, 3));
+// log(math.subtract(5, 2));
+
+// 3rd party module
+const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const reverseNumber = lodash.reverse(number);
+console.log(reverseNumber);

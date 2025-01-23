@@ -79,4 +79,6 @@ const lodash = require("lodash");
 // 3rd party module
 const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const reverseNumber = lodash.reverse(number);
-console.log(reverseNumber);
+// console.log(reverseNumber);
+const random = lodash.random(0, 10);
+console.log(random);
